@@ -4,11 +4,15 @@ import {
   Route,
   Users,
   UserCog,
+  MapPinned,
+  CalendarDays,
   BarChart3,
+  FileText,
   Settings,
   LogOut,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
+
 
 const menuItems = [
   {
@@ -37,10 +41,25 @@ const menuItems = [
     path: "/admin/routes",
   },
   {
+  title: "Live Tracking",
+  icon: <MapPinned size={22} />,
+  path: "/admin/live-tracking",
+},
+  {
+  title: "Schedules",
+  icon: <CalendarDays size={22} />,
+  path: "/admin/schedules",
+},
+  {
     title: "Analytics",
     icon: <BarChart3 size={22} />,
     path: "/admin/analytics",
   },
+  {
+  title: "Reports",
+  icon: <FileText size={22} />,
+  path: "/admin/reports",
+},
   {
     title: "Settings",
     icon: <Settings size={22} />,

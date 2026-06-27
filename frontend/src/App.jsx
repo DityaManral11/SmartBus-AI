@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
 
 import ChooseRole from "./pages/auth/ChooseRole";
 import Login from "./pages/auth/Login";
@@ -17,10 +17,17 @@ import StudentSettings from "./pages/student/Settings";
 import DriverLayout from "./layouts/DriverLayout";
 import DriverDashboard from "./pages/driver/Dashboard";
 import AssignedRoute from "./pages/driver/AssignedRoute";
-import Students from "./pages/driver/Students";
 import DriverLiveLocation from "./pages/driver/LiveLocation";
 import DriverProfile from "./pages/driver/Profile";
 import DriverSettings from "./pages/driver/Settings";
+import Drivers from "./pages/admin/Drivers";
+import Students from "./pages/admin/Students";
+import AdminRoutes from "./pages/admin/Routes";
+import Schedules from "./pages/admin/Schedules";
+import Analytics from "./pages/admin/Analytics";
+import Reports from "./pages/admin/Reports";
+import Settings from "./pages/admin/Settings";
+import AdminLiveTracking from "./pages/admin/LiveTracking";
 
 
 function App() {
@@ -53,6 +60,14 @@ function App() {
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="buses" element={<Buses />} />
+          <Route path="drivers" element={<Drivers />} />
+          <Route path="students" element={<Students />} />
+          <Route path="routes" element={<AdminRoutes />} />
+          <Route path="schedules" element={<Schedules />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="live-tracking" element={<AdminLiveTracking />} />
         </Route>
       </Routes>
     </BrowserRouter>
